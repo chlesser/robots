@@ -163,8 +163,30 @@ int MinerShip::SetupShip() {
     }
     return Finalize();
 }
-
 int GraemeShip::SetupShip() {
+    SCAN();
+    IF_SEEN() {
+        IF_SCAN_LE(450) {  // Increased from 400 - be more cautious
+            // Thrust away from threat
+            THRUST(3);
+            IF_SHIP_CAN_FIRE_PHOTON() {
+                FIRE_PHOTON();  // Fire while retreating
+            }
+        }
+    }
+    IF_SHIP_HP_LE(6) {  // Emergency threshold
+        THRUST(2);
+    }
+    IF_SHIP_FUEL_LE(35) {
+        SCAN();
+        IF_SCAN_LE(200) {  // Increased from 100
+            TURN_TO_SCAN();
+            THRUST(2);
+        }
+    }
+    return Finalize();
+}
+int Crackhead2Ship::SetupShip() {
     SCAN();
     IF_SEEN() {
         IF_SCAN_LE(450) {  // Increased from 400 - be more cautious
@@ -203,6 +225,7 @@ std::vector<std::unique_ptr<ShipBase>> AstroBots::makeShips() {
     v.emplace_back(std::make_unique<DroneShip>());
     v.emplace_back(std::make_unique<MinerShip>());
     v.emplace_back(std::make_unique<GraemeShip>());
+    v.emplace_back(std::make_unique<Crackhead2Ship>());
     return v;
 }
 
