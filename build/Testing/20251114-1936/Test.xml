@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-MSBuild"
+	BuildStamp="20251114-1936-Experimental"
+	Name="MSI"
+	Generator="ctest-3.31.6-msvc6"
+	CompilerName="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/cl.exe"
+	CompilerVersion="19.44.35217.0"
+	OSName="Windows"
+	Hostname="MSI"
+	OSRelease=" Personal"
+	OSVersion=" (Build 26200)"
+	OSPlatform="x86"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="10"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="34517"
+	TotalPhysicalMemory="32469"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2918"
+	>
+	<Testing>
+		<StartDateTime>Nov 14 11:43 Pacific Standard Time</StartDateTime>
+		<StartTestTime>1763149387</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 14 11:43 Pacific Standard Time</EndDateTime>
+		<EndTestTime>1763149387</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
